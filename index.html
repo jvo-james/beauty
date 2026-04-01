@@ -3,741 +3,552 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cisca Makeovers | Beauty Booking Website</title>
+  <title>Cisca Makeovers | Beauty Bookings</title>
   <meta
     name="description"
-    content="Book makeup, nails, lashes, brows, and hair appointments with Cisca Makeovers. Choose your service, select an available time, and pay online."
+    content="Book makeup, nails, brows, lashes, and hair services with Cisca Makeovers."
   />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
-
-  <!-- Main CSS Files -->
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Page Loader -->
-  <div class="page-loader" id="pageLoader">
-    <div class="loader-inner">
-      <div class="loader-logo">CM</div>
-      <p>Loading beauty experience...</p>
-    </div>
-  </div>
+  <div class="page-shell">
+    <!-- Floating accents -->
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-grid"></div>
 
-  <!-- Floating Booking Button -->
-  <a href="booking.html" class="floating-book-btn" aria-label="Book appointment now">
-    <i class="fa-solid fa-calendar-check"></i>
-    <span>Book Now</span>
-  </a>
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <div class="brand-mark">CM</div>
+          <div class="brand-text">
+            <span class="brand-top">CISCA</span>
+            <span class="brand-bottom">MAKEOVERS</span>
+          </div>
+        </a>
 
-  <!-- HEADER -->
-  <header class="site-header" id="siteHeader">
-    <div class="container header-container">
-      <a href="index.html" class="logo" aria-label="Cisca Makeovers home">
-        <div class="logo-mark">CM</div>
-        <div class="logo-text">
-          <span class="logo-top">Cisca</span>
-          <span class="logo-bottom">Makeovers</span>
-        </div>
-      </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#services">Services</a>
+          <a href="#experience">Experience</a>
+          <a href="#showcase">Gallery</a>
+          <a href="#occasions">Occasions</a>
+          <a href="#announcements">Updates</a>
+          <a href="booking.html" class="nav-cta">Book Now</a>
+        </nav>
 
-      <nav class="main-nav" id="mainNav">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Book</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="booking.html" class="btn btn-primary">Book Appointment</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-          <i class="fa-solid fa-bars"></i>
+          <span></span>
+          <span></span>
         </button>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-inner">
-      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+    <main>
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1800&q=80"
+            alt="Beauty portrait"
+          />
+          <div class="hero-overlay"></div>
+        </div>
 
-      <a href="index.html" class="mobile-logo">Cisca Makeovers</a>
+        <div class="container hero-content">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Beauty bookings, made easy</p>
+            <h1>
+              Makeup, nails, brows, lashes and hair
+              <span>for every moment that matters.</span>
+            </h1>
+            <p class="hero-text">
+              Book your preferred service, choose an available date and time,
+              and pay directly on the website — fast, smooth, and stress-free.
+            </p>
 
-      <ul class="mobile-nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Book Appointment</a></li>
-        <li><a href="admin.html">Admin</a></li>
-      </ul>
+            <div class="hero-actions">
+              <a href="booking.html" class="btn btn-primary">Book Appointment</a>
+              <a href="services.html" class="btn btn-secondary">Explore Services</a>
+            </div>
 
-      <div class="mobile-contact-mini">
-        <a href="tel:0594186445"><i class="fa-solid fa-phone"></i> 0594186445</a>
-        <a href="https://wa.me/233594186445" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
+            <div class="hero-mini-grid">
+              <div class="hero-mini-card">
+                <strong>Studio + Home</strong>
+                <span>Choose what works for you</span>
+              </div>
+              <div class="hero-mini-card">
+                <strong>Fast Booking</strong>
+                <span>Pick your day and time online</span>
+              </div>
+              <div class="hero-mini-card">
+                <strong>Secure Payment</strong>
+                <span>Pay on-site with Paystack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel reveal delay-1">
+            <div class="hero-panel-top">
+              <span class="live-badge">Now Booking</span>
+              <p>Signature beauty services</p>
+            </div>
+
+            <div class="hero-service-list">
+              <article>
+                <div>
+                  <h3>Soft Glam</h3>
+                  <p>Fresh, polished, camera-ready</p>
+                </div>
+                <span>from ¢250</span>
+              </article>
+
+              <article>
+                <div>
+                  <h3>Acrylic Nails</h3>
+                  <p>Short, medium, long and extra-long sets</p>
+                </div>
+                <span>from ¢150</span>
+              </article>
+
+              <article>
+                <div>
+                  <h3>Lash Sets</h3>
+                  <p>Classic, hybrid, volume and wispy</p>
+                </div>
+                <span>from ¢100</span>
+              </article>
+
+              <article>
+                <div>
+                  <h3>Hair Styling</h3>
+                  <p>Installations, curls, styling and finishing</p>
+                </div>
+                <span>from ¢70</span>
+              </article>
+            </div>
+
+            <a href="booking.html" class="panel-link">
+              Reserve your slot
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="scroll-note">
+          <span></span>
+          <p>Scroll to explore</p>
+        </div>
+      </section>
+
+      <!-- Booking strip -->
+      <section class="quick-book-section">
+        <div class="container">
+          <div class="quick-book-card reveal">
+            <div class="quick-book-intro">
+              <p class="eyebrow">Quick start</p>
+              <h2>Find your next appointment in seconds.</h2>
+            </div>
+
+            <form class="quick-book-form">
+              <div class="form-chip">
+                <label for="quickService">Service</label>
+                <select id="quickService">
+                  <option>Makeup</option>
+                  <option>Nails</option>
+                  <option>Brows</option>
+                  <option>Lashes</option>
+                  <option>Hair</option>
+                </select>
+              </div>
+
+              <div class="form-chip">
+                <label for="quickType">Appointment Type</label>
+                <select id="quickType">
+                  <option>Studio</option>
+                  <option>Home Service</option>
+                </select>
+              </div>
+
+              <div class="form-chip">
+                <label for="quickOccasion">Occasion</label>
+                <select id="quickOccasion">
+                  <option>Birthday</option>
+                  <option>Graduation</option>
+                  <option>Wedding</option>
+                  <option>Engagement</option>
+                  <option>Photoshoot</option>
+                </select>
+              </div>
+
+              <a href="booking.html" class="btn btn-primary quick-book-btn">
+                Check Availability
+              </a>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Services</p>
+            <h2>Choose your beauty category.</h2>
+            <p>
+              Clean finishes, detailed work, and options for different looks,
+              moods, and occasions.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=80"
+                  alt="Makeup service"
+                />
+              </div>
+              <div class="service-info">
+                <div class="service-top">
+                  <p class="service-tag">Makeup</p>
+                  <span class="service-price">from ¢250</span>
+                </div>
+                <h3>Natural, soft and bold glam</h3>
+                <p>
+                  Studio appointments, home service, event glam, bridal party
+                  looks, and photoshoot-ready finishes.
+                </p>
+                <a href="services.html" class="text-link">See makeup options</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=1000&q=80"
+                  alt="Nail service"
+                />
+              </div>
+              <div class="service-info">
+                <div class="service-top">
+                  <p class="service-tag">Nails</p>
+                  <span class="service-price">from ¢50</span>
+                </div>
+                <h3>Acrylics, gel, stick-ons and care</h3>
+                <p>
+                  Short to extra-long acrylic sets, simple and extra stick-ons,
+                  gel polish, cleaning, dissolving, and add-ons.
+                </p>
+                <a href="services.html" class="text-link">See nail menu</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=80"
+                  alt="Hair service"
+                />
+              </div>
+              <div class="service-info">
+                <div class="service-top">
+                  <p class="service-tag">Hair</p>
+                  <span class="service-price">from ¢70</span>
+                </div>
+                <h3>Installations and styling</h3>
+                <p>
+                  Frontal installs, closure installs, curls, straightening,
+                  wave styling, and finishing touches for events.
+                </p>
+                <a href="services.html" class="text-link">See hair services</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <div class="service-image">
+                <img
+                  src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80"
+                  alt="Lashes and brows"
+                />
+              </div>
+              <div class="service-info">
+                <div class="service-top">
+                  <p class="service-tag">Lashes + Brows</p>
+                  <span class="service-price">from ¢100</span>
+                </div>
+                <h3>Definition that changes the whole look</h3>
+                <p>
+                  Classic, hybrid, volume and wispy lashes, plus lamination,
+                  microblading, tinting, microshading and shaping.
+                </p>
+                <a href="services.html" class="text-link">See lash & brow menu</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience / standout section -->
+      <section class="experience-section" id="experience">
+        <div class="container experience-grid">
+          <div class="experience-copy reveal">
+            <p class="eyebrow">The experience</p>
+            <h2>Designed to feel smooth from first click to final look.</h2>
+            <p>
+              No back-and-forth messages. No guessing. Just clear service
+              options, visible prices, live availability, and a booking process
+              that feels as polished as the end result.
+            </p>
+
+            <div class="experience-points">
+              <div class="experience-point">
+                <h3>01</h3>
+                <div>
+                  <strong>Pick your service</strong>
+                  <p>Choose your category, look, and appointment type.</p>
+                </div>
+              </div>
+
+              <div class="experience-point">
+                <h3>02</h3>
+                <div>
+                  <strong>Select an available slot</strong>
+                  <p>Only open days and times will show on the booking page.</p>
+                </div>
+              </div>
+
+              <div class="experience-point">
+                <h3>03</h3>
+                <div>
+                  <strong>Pay and get confirmed</strong>
+                  <p>Secure checkout with automatic confirmation after payment.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-stack reveal delay-1">
+            <div class="stack-card stack-main">
+              <img
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80"
+                alt="Beauty closeup"
+              />
+            </div>
+            <div class="stack-card stack-small stack-small-one">
+              <img
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+                alt="Beauty detail"
+              />
+            </div>
+            <div class="stack-card stack-small stack-small-two">
+              <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+                alt="Model portrait"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slideshow -->
+      <section class="showcase-section" id="showcase">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Showcase</p>
+            <h2>A scrolling moodboard of beauty moments.</h2>
+          </div>
+
+          <div class="showcase-slider reveal">
+            <button class="slider-btn prev" id="prevSlide" aria-label="Previous slide">
+              &#10094;
+            </button>
+
+            <div class="slides-window">
+              <div class="slides-track" id="slidesTrack">
+                <article class="slide active">
+                  <img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1600&q=80"
+                    alt="Beauty showcase 1"
+                  />
+                  <div class="slide-content">
+                    <p>Soft finishes</p>
+                    <h3>Looks that stay clean, fresh and camera-ready.</h3>
+                  </div>
+                </article>
+
+                <article class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80"
+                    alt="Beauty showcase 2"
+                  />
+                  <div class="slide-content">
+                    <p>Event-ready glam</p>
+                    <h3>Booked for birthdays, graduations, weddings and more.</h3>
+                  </div>
+                </article>
+
+                <article class="slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1600&q=80"
+                    alt="Beauty showcase 3"
+                  />
+                  <div class="slide-content">
+                    <p>Details matter</p>
+                    <h3>Defined brows, statement lashes, polished finishes.</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="slider-btn next" id="nextSlide" aria-label="Next slide">
+              &#10095;
+            </button>
+          </div>
+
+          <div class="slider-dots" id="sliderDots">
+            <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+            <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+            <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Occasions -->
+      <section class="occasions-section" id="occasions">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Occasions</p>
+            <h2>Book by the moment you’re getting ready for.</h2>
+          </div>
+
+          <div class="occasions-grid">
+            <article class="occasion-card reveal">
+              <span>01</span>
+              <h3>Graduations</h3>
+              <p>Soft glam, lashes, hairstyling and polished finishing touches.</p>
+            </article>
+
+            <article class="occasion-card reveal delay-1">
+              <span>02</span>
+              <h3>Weddings</h3>
+              <p>Bridesmaids, guests, engagement looks and event-ready beauty.</p>
+            </article>
+
+            <article class="occasion-card reveal">
+              <span>03</span>
+              <h3>Birthdays</h3>
+              <p>Fresh, bold, soft or statement looks that feel just right.</p>
+            </article>
+
+            <article class="occasion-card reveal delay-1">
+              <span>04</span>
+              <h3>Photoshoots</h3>
+              <p>Looks built to read beautifully on camera and on video.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Announcements -->
+      <section class="announcements-section" id="announcements">
+        <div class="container">
+          <div class="announcement-wrap reveal">
+            <div class="announcement-copy">
+              <p class="eyebrow">Updates</p>
+              <h2>Promos and announcements, styled like part of the brand.</h2>
+              <p>
+                This section can later pull live updates from the admin page —
+                so promos, booking notices, and special offers always stay fresh.
+              </p>
+              <a href="booking.html" class="btn btn-primary">Book a Slot</a>
+            </div>
+
+            <div class="announcement-cards">
+              <article class="announcement-card">
+                <span class="announcement-label">Now Open</span>
+                <h3>Graduation season bookings</h3>
+                <p>Reserve early to get your preferred date and time.</p>
+              </article>
+
+              <article class="announcement-card featured">
+                <span class="announcement-label">Popular</span>
+                <h3>Soft glam + lashes combo</h3>
+                <p>A clean, photo-ready pairing for events and shoots.</p>
+              </article>
+
+              <article class="announcement-card">
+                <span class="announcement-label">New</span>
+                <h3>Updated availability every week</h3>
+                <p>New time slots can be added directly from the admin dashboard.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-card reveal">
+            <p class="eyebrow">Ready when you are</p>
+            <h2>Choose your service, pick your slot, and let the website do the rest.</h2>
+            <div class="cta-actions">
+              <a href="booking.html" class="btn btn-primary">Book Now</a>
+              <a href="services.html" class="btn btn-secondary">View Full Service Menu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <div class="brand-mark">CM</div>
+            <div class="brand-text">
+              <span class="brand-top">CISCA</span>
+              <span class="brand-bottom">MAKEOVERS</span>
+            </div>
+          </a>
+          <p class="footer-text">
+            Makeup, nails, brows, lashes and hair bookings in one smooth online experience.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#showcase">Gallery</a></li>
+            <li><a href="#announcements">Updates</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0594186445">0594 186 445</a></li>
+            <li><a href="https://instagram.com/cisca.makeovers" target="_blank">Instagram</a></li>
+            <li><a href="https://tiktok.com/@cisca.makeovers" target="_blank">TikTok</a></li>
+            <li><a href="https://snapchat.com/add/cisca.mua" target="_blank">Snapchat</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </footer>
   </div>
 
-  <main>
-    <!-- HERO -->
-    <section
-      class="hero-section"
-      id="hero"
-      style="
-        background:
-          linear-gradient(120deg, rgba(34, 17, 30, 0.72), rgba(120, 57, 93, 0.45)),
-          url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80')
-          center/cover no-repeat;
-      "
-    >
-      <div class="container hero-container">
-        <div class="hero-content">
-          <span class="hero-badge">
-            <i class="fa-solid fa-sparkles"></i>
-            Beauty booking made easy
-          </span>
-
-          <h1>
-            Beauty services for your big moments,
-            <span>without the back-and-forth.</span>
-          </h1>
-
-          <p class="hero-text">
-            Book makeup, nails, hair, brows, and lashes online. Choose your
-            service, select from available dates and times, pay on the site,
-            and get an instant confirmation.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="booking.html" class="btn btn-primary btn-lg">
-              <i class="fa-solid fa-calendar-check"></i>
-              Book Appointment
-            </a>
-            <a href="services.html" class="btn btn-outline btn-lg">
-              <i class="fa-solid fa-grid-2"></i>
-              Explore Services
-            </a>
-          </div>
-
-          <div class="hero-mini-features">
-            <div class="mini-feature">
-              <i class="fa-solid fa-clock"></i>
-              <span>Live availability</span>
-            </div>
-            <div class="mini-feature">
-              <i class="fa-solid fa-credit-card"></i>
-              <span>Paystack payments</span>
-            </div>
-            <div class="mini-feature">
-              <i class="fa-solid fa-envelope-circle-check"></i>
-              <span>Auto confirmation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card-stack">
-          <div class="hero-info-card glass-card">
-            <div class="hero-info-card-top">
-              <span class="small-label">Today’s flow</span>
-              <span class="status-dot">Open</span>
-            </div>
-
-            <h3>Your appointment, fully handled online</h3>
-
-            <ul class="hero-booking-steps">
-              <li><span>1</span> Choose your service</li>
-              <li><span>2</span> Pick an open date</li>
-              <li><span>3</span> Select a time slot</li>
-              <li><span>4</span> Pay securely online</li>
-              <li><span>5</span> Receive instant confirmation</li>
-            </ul>
-          </div>
-
-          <div class="hero-floating-card">
-            <p>Popular this week</p>
-            <h4>Graduation Glam</h4>
-            <span>Soft glam + lashes + nails</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST STRIP -->
-    <section class="trust-strip">
-      <div class="container trust-strip-container">
-        <div class="trust-item">
-          <i class="fa-solid fa-calendar-days"></i>
-          <span>Choose only from available dates</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-wallet"></i>
-          <span>Pay deposits or full amount online</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-bell"></i>
-          <span>Automatic booking confirmation</span>
-        </div>
-        <div class="trust-item">
-          <i class="fa-solid fa-mobile-screen-button"></i>
-          <span>Easy on mobile</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / INTRO -->
-    <section class="intro-section section-space">
-      <div class="container intro-grid">
-        <div class="intro-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=80"
-            alt="Beauty studio client portrait"
-          />
-          <div class="intro-image-card">
-            <i class="fa-solid fa-heart"></i>
-            <span>Tailored for weddings, birthdays, graduations, and more</span>
-          </div>
-        </div>
-
-        <div class="intro-content">
-          <span class="section-tag">Why this website works</span>
-          <h2>
-            A polished beauty website that helps her stay booked
-            <span>without replying to every message herself.</span>
-          </h2>
-          <p>
-            The website is designed to do more than just look pretty. It helps
-            clients discover services, choose the right appointment, pay online,
-            and receive confirmation automatically.
-          </p>
-
-          <div class="intro-points">
-            <div class="intro-point">
-              <i class="fa-solid fa-check"></i>
-              <div>
-                <h4>Smart booking flow</h4>
-                <p>Clients only see days and times she has opened.</p>
-              </div>
-            </div>
-
-            <div class="intro-point">
-              <i class="fa-solid fa-check"></i>
-              <div>
-                <h4>Less stress</h4>
-                <p>No constant back-and-forth just to confirm appointments.</p>
-              </div>
-            </div>
-
-            <div class="intro-point">
-              <i class="fa-solid fa-check"></i>
-              <div>
-                <h4>Better experience</h4>
-                <p>Everything feels smooth, clear, and easy to trust.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES PREVIEW -->
-    <section class="services-preview section-space" id="servicesPreview">
-      <div class="container">
-        <div class="section-heading center">
-          <span class="section-tag">Services</span>
-          <h2>A service section that feels like a full beauty experience</h2>
-          <p>
-            Instead of a boring list, each service should feel visual, exciting,
-            and easy to book.
-          </p>
-        </div>
-
-        <div class="services-preview-grid">
-          <article class="service-preview-card large-card">
-            <div
-              class="service-preview-image"
-              style="
-                background:
-                  linear-gradient(to top, rgba(32, 14, 24, 0.55), rgba(32, 14, 24, 0.08)),
-                  url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80')
-                  center/cover no-repeat;
-              "
-            ></div>
-            <div class="service-preview-content">
-              <span class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-              <h3>Makeup</h3>
-              <p>
-                Natural glam, soft glam, and bold glam for celebrations,
-                shoots, and special moments.
-              </p>
-              <ul>
-                <li>Natural Glam</li>
-                <li>Soft Glam</li>
-                <li>Bold Glam</li>
-                <li>Studio & Home Service</li>
-              </ul>
-              <a href="services.html" class="text-link">View details</a>
-            </div>
-          </article>
-
-          <article class="service-preview-card">
-            <div
-              class="service-preview-image"
-              style="
-                background:
-                  linear-gradient(to top, rgba(32, 14, 24, 0.5), rgba(32, 14, 24, 0.1)),
-                  url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80')
-                  center/cover no-repeat;
-              "
-            ></div>
-            <div class="service-preview-content">
-              <span class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></span>
-              <h3>Nails</h3>
-              <p>Acrylics, stick-ons, gel polish, cleaning, and removal.</p>
-              <a href="services.html" class="text-link">See nail menu</a>
-            </div>
-          </article>
-
-          <article class="service-preview-card">
-            <div
-              class="service-preview-image"
-              style="
-                background:
-                  linear-gradient(to top, rgba(32, 14, 24, 0.5), rgba(32, 14, 24, 0.1)),
-                  url('https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1200&q=80')
-                  center/cover no-repeat;
-              "
-            ></div>
-            <div class="service-preview-content">
-              <span class="service-icon"><i class="fa-solid fa-scissors"></i></span>
-              <h3>Hair</h3>
-              <p>Installations and styling for sleek, finished looks.</p>
-              <a href="services.html" class="text-link">Explore hair services</a>
-            </div>
-          </article>
-
-          <article class="service-preview-card">
-            <div
-              class="service-preview-image"
-              style="
-                background:
-                  linear-gradient(to top, rgba(32, 14, 24, 0.5), rgba(32, 14, 24, 0.1)),
-                  url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80')
-                  center/cover no-repeat;
-              "
-            ></div>
-            <div class="service-preview-content">
-              <span class="service-icon"><i class="fa-solid fa-eye"></i></span>
-              <h3>Lashes</h3>
-              <p>Classic, hybrid, volume, and wispy styles for every finish.</p>
-              <a href="services.html" class="text-link">See lash options</a>
-            </div>
-          </article>
-
-          <article class="service-preview-card">
-            <div
-              class="service-preview-image"
-              style="
-                background:
-                  linear-gradient(to top, rgba(32, 14, 24, 0.5), rgba(32, 14, 24, 0.1)),
-                  url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80')
-                  center/cover no-repeat;
-              "
-            ></div>
-            <div class="service-preview-content">
-              <span class="service-icon"><i class="fa-solid fa-pen-ruler"></i></span>
-              <h3>Brows</h3>
-              <p>Microblading, microshading, lamination, tinting, and shaping.</p>
-              <a href="services.html" class="text-link">View brow services</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="services-preview-cta">
-          <a href="services.html" class="btn btn-primary">
-            Explore Full Services
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works section-space alt-bg">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-tag">How booking works</span>
-          <h2>Simple for the client. Easy to manage for her.</h2>
-          <p>
-            The booking process should feel smooth from start to finish.
-          </p>
-        </div>
-
-        <div class="how-grid">
-          <div class="how-step">
-            <div class="step-number">01</div>
-            <h3>Choose a service</h3>
-            <p>Clients select makeup, nails, brows, lashes, hair, or a package.</p>
-          </div>
-
-          <div class="how-step">
-            <div class="step-number">02</div>
-            <h3>See available days</h3>
-            <p>Only the dates she opens appear for booking.</p>
-          </div>
-
-          <div class="how-step">
-            <div class="step-number">03</div>
-            <h3>Pick a time</h3>
-            <p>Clients choose from open time slots that haven’t been taken.</p>
-          </div>
-
-          <div class="how-step">
-            <div class="step-number">04</div>
-            <h3>Pay online</h3>
-            <p>Deposit or full payment is completed on the site through Paystack.</p>
-          </div>
-
-          <div class="how-step">
-            <div class="step-number">05</div>
-            <h3>Get confirmation</h3>
-            <p>An automatic email or message confirms the appointment instantly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDESHOW SECTION -->
-    <section class="showcase-slideshow section-space" id="showcaseSlideshow">
-      <div class="container">
-        <div class="section-heading center">
-          <span class="section-tag">Featured slideshow</span>
-          <h2>A section that makes the homepage feel alive</h2>
-          <p>
-            This can rotate between makeup, lashes, nails, hair, and occasion-based beauty looks.
-          </p>
-        </div>
-
-        <div class="slideshow-wrapper" id="homepageSlideshow">
-          <div class="slideshow-track">
-            <div
-              class="slide active"
-              style="
-                background:
-                  linear-gradient(to top, rgba(27, 10, 20, 0.58), rgba(27, 10, 20, 0.1)),
-                  url('https://images.unsplash.com/photo-1498843053639-170ff2122f35?auto=format&fit=crop&w=1600&q=80')
-                  center/cover no-repeat;
-              "
-            >
-              <div class="slide-content">
-                <span class="slide-tag">Makeup moments</span>
-                <h3>Soft glam that photographs beautifully</h3>
-                <p>Perfect for birthdays, graduations, and photoshoots.</p>
-                <a href="booking.html" class="btn btn-light">Book this look</a>
-              </div>
-            </div>
-
-            <div
-              class="slide"
-              style="
-                background:
-                  linear-gradient(to top, rgba(27, 10, 20, 0.58), rgba(27, 10, 20, 0.1)),
-                  url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80')
-                  center/cover no-repeat;
-              "
-            >
-              <div class="slide-content">
-                <span class="slide-tag">Hair styling</span>
-                <h3>Sleek finishing that completes the whole look</h3>
-                <p>Clean styling for events, shoots, and special days.</p>
-                <a href="services.html" class="btn btn-light">See hair services</a>
-              </div>
-            </div>
-
-            <div
-              class="slide"
-              style="
-                background:
-                  linear-gradient(to top, rgba(27, 10, 20, 0.58), rgba(27, 10, 20, 0.1)),
-                  url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80')
-                  center/cover no-repeat;
-              "
-            >
-              <div class="slide-content">
-                <span class="slide-tag">Occasion ready</span>
-                <h3>Book for the event, not just the service</h3>
-                <p>Choose a beauty package based on your occasion and schedule.</p>
-                <a href="booking.html" class="btn btn-light">Start booking</a>
-              </div>
-            </div>
-          </div>
-
-          <button class="slide-nav prev" id="slidePrev" aria-label="Previous slide">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="slide-nav next" id="slideNext" aria-label="Next slide">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-
-          <div class="slide-dots" id="slideDots">
-            <button class="dot active" aria-label="Slide 1"></button>
-            <button class="dot" aria-label="Slide 2"></button>
-            <button class="dot" aria-label="Slide 3"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OCCASIONS -->
-    <section class="occasions-section section-space">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-tag">Book by occasion</span>
-          <h2>Help clients choose faster by starting with the event</h2>
-          <p>
-            People usually know what they’re preparing for before they know the exact service.
-          </p>
-        </div>
-
-        <div class="occasion-grid">
-          <article class="occasion-card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h3>Graduations</h3>
-            <p>Soft glam, lashes, nails, and styling for your big day.</p>
-          </article>
-
-          <article class="occasion-card">
-            <i class="fa-solid fa-ring"></i>
-            <h3>Weddings</h3>
-            <p>Bridal bookings, bridesmaid looks, and event beauty prep.</p>
-          </article>
-
-          <article class="occasion-card">
-            <i class="fa-solid fa-cake-candles"></i>
-            <h3>Birthdays</h3>
-            <p>Choose a clean, soft, or fuller glam look for your celebration.</p>
-          </article>
-
-          <article class="occasion-card">
-            <i class="fa-solid fa-camera-retro"></i>
-            <h3>Photoshoots</h3>
-            <p>Looks designed to stand out beautifully on camera.</p>
-          </article>
-
-          <article class="occasion-card">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <h3>Engagements</h3>
-            <p>Beautiful finishing for your pre-wedding moments and events.</p>
-          </article>
-
-          <article class="occasion-card">
-            <i class="fa-solid fa-award"></i>
-            <h3>Matriculations</h3>
-            <p>Fresh, polished looks for milestone moments and celebrations.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROMOS / ANNOUNCEMENTS -->
-    <section class="updates-section section-space alt-soft">
-      <div class="container">
-        <div class="section-heading center">
-          <span class="section-tag">What’s new</span>
-          <h2>A useful section for promos, open slots, and important updates</h2>
-          <p>
-            This keeps the website active and helps clients know what’s currently available.
-          </p>
-        </div>
-
-        <div class="updates-grid">
-          <article class="update-card featured">
-            <span class="update-label">Open slots</span>
-            <h3>This week’s available appointments</h3>
-            <p>
-              Feature available times, last-minute openings, and quick booking opportunities here.
-            </p>
-            <a href="booking.html" class="text-link">Check availability</a>
-          </article>
-
-          <article class="update-card">
-            <span class="update-label">Promo</span>
-            <h3>Graduation beauty bundles</h3>
-            <p>
-              Create event-based packages like soft glam + lashes + nails for selected dates.
-            </p>
-          </article>
-
-          <article class="update-card">
-            <span class="update-label">New</span>
-            <h3>New service announcements</h3>
-            <p>
-              Highlight new brow services, lash sets, or styling additions as they launch.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUICK BOOK CTA -->
-    <section class="quick-book-banner">
-      <div class="container quick-book-banner-inner">
-        <div>
-          <span class="section-tag light">Ready when you are</span>
-          <h2>Choose your service, pick your time, and book in minutes.</h2>
-        </div>
-        <a href="booking.html" class="btn btn-light btn-lg">
-          <i class="fa-solid fa-arrow-right"></i>
-          Go to Booking
-        </a>
-      </div>
-    </section>
-
-    <!-- SOCIALS + CONTACT -->
-    <section class="contact-social-section section-space">
-      <div class="container contact-social-grid">
-        <div class="contact-card">
-          <span class="section-tag">Contact</span>
-          <h2>Let the website handle the booking, and keep contact easy too.</h2>
-
-          <div class="contact-list">
-            <a href="tel:0594186445">
-              <i class="fa-solid fa-phone"></i>
-              <span>0594186445</span>
-            </a>
-
-            <a href="https://wa.me/233594186445" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Chat on WhatsApp</span>
-            </a>
-
-            <a href="https://instagram.com/cisca.makeovers" target="_blank" rel="noopener">
-              <i class="fa-brands fa-instagram"></i>
-              <span>@cisca.makeovers</span>
-            </a>
-
-            <a href="https://tiktok.com/@cisca.makeovers" target="_blank" rel="noopener">
-              <i class="fa-brands fa-tiktok"></i>
-              <span>@cisca.makeovers</span>
-            </a>
-
-            <a href="#" target="_blank" rel="noopener">
-              <i class="fa-brands fa-snapchat"></i>
-              <span>cisca.mua</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="social-showcase-card">
-          <div class="mini-card">
-            <i class="fa-brands fa-youtube"></i>
-            <div>
-              <h4>YouTube</h4>
-              <p>Cisca.makeovers</p>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <i class="fa-brands fa-pinterest-p"></i>
-            <div>
-              <h4>Pinterest</h4>
-              <p>CiscaMakeovers</p>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <i class="fa-solid fa-credit-card"></i>
-            <div>
-              <h4>Payments</h4>
-              <p>Paystack checkout on booking page</p>
-            </div>
-          </div>
-
-          <div class="mini-card">
-            <i class="fa-solid fa-envelope-open-text"></i>
-            <div>
-              <h4>Confirmation</h4>
-              <p>Automated after a successful booking</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo footer-logo">
-          <div class="logo-mark">CM</div>
-          <div class="logo-text">
-            <span class="logo-top">Cisca</span>
-            <span class="logo-bottom">Makeovers</span>
-          </div>
-        </a>
-        <p>
-          Makeup, nails, brows, lashes, and hair bookings made simple with live
-          availability and online payment.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="admin.html">Admin</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Makeup</a></li>
-          <li><a href="services.html">Nails</a></li>
-          <li><a href="services.html">Lashes</a></li>
-          <li><a href="services.html">Brows</a></li>
-          <li><a href="services.html">Hair</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:0594186445">0594186445</a></li>
-          <li><a href="https://instagram.com/cisca.makeovers" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://tiktok.com/@cisca.makeovers" target="_blank" rel="noopener">TikTok</a></li>
-          <li><a href="https://wa.me/233594186445" target="_blank" rel="noopener">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Cisca Makeovers. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/navigation.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
