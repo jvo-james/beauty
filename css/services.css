@@ -673,3 +673,13 @@
     justify-content: flex-start;
   }
 }
+
+.category-card.active-category {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(217, 108, 157, 0.22);
+}
+
+.category-card.active-category::after {
+  transform: scaleX(1);
+}
