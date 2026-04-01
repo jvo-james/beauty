@@ -1,1 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cisca Makeovers | Admin</title>
+  <meta
+    name="description"
+    content="Admin dashboard for Cisca Makeovers bookings, availability, services, payments and updates."
+  />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell admin-page-shell">
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-grid"></div>
+
+    <header class="site-header admin-header" id="top">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <div class="brand-mark">CM</div>
+          <div class="brand-text">
+            <span class="brand-top">CISCA</span>
+            <span class="brand-bottom">MAKEOVERS</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="booking.html">Booking</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#availabilityManager">Availability</a>
+          <a href="#bookingsManager">Bookings</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <!-- Admin hero -->
+      <section class="admin-hero-section">
+        <div class="container admin-hero-grid">
+          <div class="admin-hero-copy reveal">
+            <p class="eyebrow">Admin Control Room</p>
+            <h1>
+              Control bookings,
+              <span>availability, payments and updates from one place.</span>
+            </h1>
+            <p class="hero-text">
+              This dashboard layout is built for Firebase authentication,
+              Firestore data, Paystack payment tracking, service management and
+              live booking control.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#dashboard" class="btn btn-primary">Open Dashboard</a>
+              <a href="#adminLogin" class="btn btn-secondary">Admin Login</a>
+            </div>
+          </div>
+
+          <div class="admin-hero-panel reveal delay-1">
+            <div class="admin-glass-card">
+              <span class="live-badge">Today at a glance</span>
+
+              <div class="admin-quick-lines">
+                <div class="admin-quick-line">
+                  <span>Bookings today</span>
+                  <strong>08</strong>
+                </div>
+                <div class="admin-quick-line">
+                  <span>Pending confirmations</span>
+                  <strong>03</strong>
+                </div>
+                <div class="admin-quick-line">
+                  <span>Paid appointments</span>
+                  <strong>06</strong>
+                </div>
+                <div class="admin-quick-line">
+                  <span>Blocked slots</span>
+                  <strong>04</strong>
+                </div>
+              </div>
+
+              <p class="admin-hero-note">
+                Once connected, these cards can pull real values from Firebase.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Login -->
+      <section class="admin-login-section" id="adminLogin">
+        <div class="container">
+          <div class="admin-login-card reveal">
+            <div class="admin-login-copy">
+              <p class="eyebrow">Secure access</p>
+              <h2>Admin login</h2>
+              <p>
+                This should later connect to Firebase Authentication so only the
+                business owner can manage the dashboard.
+              </p>
+            </div>
+
+            <form class="admin-login-form">
+              <div class="booking-field">
+                <label for="adminEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="adminEmail"
+                  name="adminEmail"
+                  placeholder="Enter admin email"
+                />
+              </div>
+
+              <div class="booking-field">
+                <label for="adminPassword">Password</label>
+                <input
+                  type="password"
+                  id="adminPassword"
+                  name="adminPassword"
+                  placeholder="Enter password"
+                />
+              </div>
+
+              <button type="button" class="btn btn-primary">Login to Dashboard</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard overview -->
+      <section class="admin-dashboard-section" id="dashboard">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Overview</p>
+            <h2>Everything important, right in front of you.</h2>
+          </div>
+
+          <div class="admin-stat-grid">
+            <article class="admin-stat-card reveal">
+              <div class="admin-stat-top">
+                <span>Total Bookings</span>
+                <strong>128</strong>
+              </div>
+              <p>All recorded appointments</p>
+            </article>
+
+            <article class="admin-stat-card reveal delay-1">
+              <div class="admin-stat-top">
+                <span>Upcoming</span>
+                <strong>24</strong>
+              </div>
+              <p>Appointments still ahead</p>
+            </article>
+
+            <article class="admin-stat-card reveal">
+              <div class="admin-stat-top">
+                <span>Revenue</span>
+                <strong>¢8,420</strong>
+              </div>
+              <p>Tracked from completed payments</p>
+            </article>
+
+            <article class="admin-stat-card reveal delay-1">
+              <div class="admin-stat-top">
+                <span>Pending</span>
+                <strong>07</strong>
+              </div>
+              <p>Awaiting action or payment check</p>
+            </article>
+          </div>
+
+          <div class="admin-overview-grid">
+            <article class="admin-panel reveal">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Schedule snapshot</p>
+                  <h3>Today’s appointments</h3>
+                </div>
+                <a href="#bookingsManager" class="menu-book-link">View all</a>
+              </div>
+
+              <div class="mini-booking-list">
+                <div class="mini-booking-item">
+                  <strong>8:00 AM</strong>
+                  <div>
+                    <h4>Soft Glam</h4>
+                    <p>Ama Serwaa · Paid</p>
+                  </div>
+                  <span class="status-pill confirmed">Confirmed</span>
+                </div>
+
+                <div class="mini-booking-item">
+                  <strong>11:00 AM</strong>
+                  <div>
+                    <h4>Hybrid Lash Set</h4>
+                    <p>Mabel Ofori · Paid</p>
+                  </div>
+                  <span class="status-pill confirmed">Confirmed</span>
+                </div>
+
+                <div class="mini-booking-item">
+                  <strong>2:00 PM</strong>
+                  <div>
+                    <h4>Frontal Styling</h4>
+                    <p>Priscilla · Pending</p>
+                  </div>
+                  <span class="status-pill pending">Pending</span>
+                </div>
+
+                <div class="mini-booking-item">
+                  <strong>5:30 PM</strong>
+                  <div>
+                    <h4>Acrylic Long</h4>
+                    <p>Akosua · Paid</p>
+                  </div>
+                  <span class="status-pill confirmed">Confirmed</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="admin-panel reveal delay-1">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Quick actions</p>
+                  <h3>Things you’ll do often</h3>
+                </div>
+              </div>
+
+              <div class="quick-actions-grid">
+                <button type="button" class="quick-action-btn">Add Service</button>
+                <button type="button" class="quick-action-btn">Block Date</button>
+                <button type="button" class="quick-action-btn">Post Update</button>
+                <button type="button" class="quick-action-btn">View Payments</button>
+                <button type="button" class="quick-action-btn">Upload Gallery</button>
+                <button type="button" class="quick-action-btn">Export Bookings</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Availability manager -->
+      <section class="availability-manager-section" id="availabilityManager">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Availability Manager</p>
+            <h2>Decide when clients can book — and when they can’t.</h2>
+          </div>
+
+          <div class="admin-two-column">
+            <article class="admin-panel reveal">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Weekly setup</p>
+                  <h3>Working days and hours</h3>
+                </div>
+              </div>
+
+              <form class="admin-form-grid">
+                <div class="booking-field">
+                  <label for="workingDays">Working Days</label>
+                  <select id="workingDays">
+                    <option>Monday - Saturday</option>
+                    <option>Tuesday - Sunday</option>
+                    <option>Weekends Only</option>
+                  </select>
+                </div>
+
+                <div class="booking-field">
+                  <label for="startTime">Start Time</label>
+                  <input type="time" id="startTime" />
+                </div>
+
+                <div class="booking-field">
+                  <label for="endTime">End Time</label>
+                  <input type="time" id="endTime" />
+                </div>
+
+                <div class="booking-field">
+                  <label for="slotDuration">Slot Duration</label>
+                  <select id="slotDuration">
+                    <option>30 minutes</option>
+                    <option>1 hour</option>
+                    <option>1 hour 30 minutes</option>
+                    <option>2 hours</option>
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary admin-inline-btn">
+                  Save Availability
+                </button>
+              </form>
+            </article>
+
+            <article class="admin-panel reveal delay-1">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Date control</p>
+                  <h3>Block dates and special slots</h3>
+                </div>
+              </div>
+
+              <form class="admin-form-grid">
+                <div class="booking-field">
+                  <label for="blockDate">Block a Date</label>
+                  <input type="date" id="blockDate" />
+                </div>
+
+                <div class="booking-field">
+                  <label for="blockReason">Reason</label>
+                  <input
+                    type="text"
+                    id="blockReason"
+                    placeholder="Unavailable, event, off day..."
+                  />
+                </div>
+
+                <div class="booking-field">
+                  <label for="specialDate">Add Special Availability</label>
+                  <input type="date" id="specialDate" />
+                </div>
+
+                <div class="booking-field">
+                  <label for="specialTime">Special Time Range</label>
+                  <input
+                    type="text"
+                    id="specialTime"
+                    placeholder="e.g. 1:00 PM - 5:00 PM"
+                  />
+                </div>
+
+                <button type="button" class="btn btn-secondary admin-inline-btn">
+                  Update Calendar Rules
+                </button>
+              </form>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services manager -->
+      <section class="services-manager-section" id="servicesManager">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Services Manager</p>
+            <h2>Add, edit and organize the full service menu.</h2>
+          </div>
+
+          <div class="admin-two-column">
+            <article class="admin-panel reveal">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Create or edit</p>
+                  <h3>Service details</h3>
+                </div>
+              </div>
+
+              <form class="admin-form-grid">
+                <div class="booking-field">
+                  <label for="serviceCategoryAdmin">Category</label>
+                  <select id="serviceCategoryAdmin">
+                    <option>Makeup</option>
+                    <option>Nails</option>
+                    <option>Brows</option>
+                    <option>Lashes</option>
+                    <option>Hair</option>
+                  </select>
+                </div>
+
+                <div class="booking-field">
+                  <label for="serviceNameAdmin">Service Name</label>
+                  <input
+                    type="text"
+                    id="serviceNameAdmin"
+                    placeholder="e.g. Soft Glam"
+                  />
+                </div>
+
+                <div class="booking-field">
+                  <label for="servicePriceAdmin">Price</label>
+                  <input
+                    type="text"
+                    id="servicePriceAdmin"
+                    placeholder="e.g. 250"
+                  />
+                </div>
+
+                <div class="booking-field">
+                  <label for="serviceDurationAdmin">Duration</label>
+                  <input
+                    type="text"
+                    id="serviceDurationAdmin"
+                    placeholder="e.g. 2 hours"
+                  />
+                </div>
+
+                <div class="booking-field admin-field-wide">
+                  <label for="serviceDescriptionAdmin">Description</label>
+                  <textarea
+                    id="serviceDescriptionAdmin"
+                    rows="4"
+                    placeholder="Describe the service..."
+                  ></textarea>
+                </div>
+
+                <div class="booking-field">
+                  <label for="serviceTypeAdmin">Appointment Type</label>
+                  <select id="serviceTypeAdmin">
+                    <option>Studio Only</option>
+                    <option>Home Service Only</option>
+                    <option>Studio + Home Service</option>
+                  </select>
+                </div>
+
+                <div class="booking-field">
+                  <label for="serviceStatusAdmin">Status</label>
+                  <select id="serviceStatusAdmin">
+                    <option>Active</option>
+                    <option>Hidden</option>
+                    <option>Coming Soon</option>
+                  </select>
+                </div>
+
+                <button type="button" class="btn btn-primary admin-inline-btn">
+                  Save Service
+                </button>
+              </form>
+            </article>
+
+            <article class="admin-panel reveal delay-1">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Current menu</p>
+                  <h3>Existing services</h3>
+                </div>
+              </div>
+
+              <div class="admin-service-list">
+                <div class="admin-service-item">
+                  <div>
+                    <h4>Soft Glam</h4>
+                    <p>Makeup · ¢250 · Active</p>
+                  </div>
+                  <div class="admin-list-actions">
+                    <button type="button">Edit</button>
+                    <button type="button">Hide</button>
+                  </div>
+                </div>
+
+                <div class="admin-service-item">
+                  <div>
+                    <h4>Acrylic Long</h4>
+                    <p>Nails · ¢200 · Active</p>
+                  </div>
+                  <div class="admin-list-actions">
+                    <button type="button">Edit</button>
+                    <button type="button">Hide</button>
+                  </div>
+                </div>
+
+                <div class="admin-service-item">
+                  <div>
+                    <h4>Hybrid Lash Set</h4>
+                    <p>Lashes · ¢140 · Active</p>
+                  </div>
+                  <div class="admin-list-actions">
+                    <button type="button">Edit</button>
+                    <button type="button">Hide</button>
+                  </div>
+                </div>
+
+                <div class="admin-service-item">
+                  <div>
+                    <h4>Frontal Install</h4>
+                    <p>Hair · ¢150 · Active</p>
+                  </div>
+                  <div class="admin-list-actions">
+                    <button type="button">Edit</button>
+                    <button type="button">Hide</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bookings manager -->
+      <section class="bookings-manager-section" id="bookingsManager">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Bookings Manager</p>
+            <h2>Track every appointment without messy back-and-forth.</h2>
+          </div>
+
+          <div class="admin-panel reveal">
+            <div class="admin-panel-head bookings-head">
+              <div>
+                <p class="service-menu-label">Appointment list</p>
+                <h3>Recent bookings</h3>
+              </div>
+
+              <div class="bookings-filter-row">
+                <select>
+                  <option>All Statuses</option>
+                  <option>Confirmed</option>
+                  <option>Pending</option>
+                  <option>Cancelled</option>
+                  <option>Completed</option>
+                </select>
+
+                <select>
+                  <option>All Services</option>
+                  <option>Makeup</option>
+                  <option>Nails</option>
+                  <option>Brows</option>
+                  <option>Lashes</option>
+                  <option>Hair</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ama Serwaa</td>
+                    <td>Soft Glam</td>
+                    <td>12 May</td>
+                    <td>9:30 AM</td>
+                    <td>Paid</td>
+                    <td><span class="status-pill confirmed">Confirmed</span></td>
+                    <td><button type="button" class="table-btn">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>Mabel Ofori</td>
+                    <td>Hybrid Lash Set</td>
+                    <td>12 May</td>
+                    <td>11:00 AM</td>
+                    <td>Paid</td>
+                    <td><span class="status-pill confirmed">Confirmed</span></td>
+                    <td><button type="button" class="table-btn">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>Priscilla</td>
+                    <td>Frontal Styling</td>
+                    <td>12 May</td>
+                    <td>2:00 PM</td>
+                    <td>Pending</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button type="button" class="table-btn">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>Akosua Frimpong</td>
+                    <td>Acrylic Long</td>
+                    <td>13 May</td>
+                    <td>5:00 PM</td>
+                    <td>Paid</td>
+                    <td><span class="status-pill completed">Completed</span></td>
+                    <td><button type="button" class="table-btn">Open</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payments + announcements -->
+      <section class="admin-lower-section">
+        <div class="container admin-two-column">
+          <article class="admin-panel reveal">
+            <div class="admin-panel-head">
+              <div>
+                <p class="service-menu-label">Payment tracker</p>
+                <h3>Paystack payment overview</h3>
+              </div>
+            </div>
+
+            <div class="payment-overview-list">
+              <div class="payment-overview-item">
+                <div>
+                  <h4>Soft Glam · Ama Serwaa</h4>
+                  <p>Reference: PSK-2026-001</p>
+                </div>
+                <strong>¢250</strong>
+              </div>
+
+              <div class="payment-overview-item">
+                <div>
+                  <h4>Hybrid Lash Set · Mabel Ofori</h4>
+                  <p>Reference: PSK-2026-002</p>
+                </div>
+                <strong>¢140</strong>
+              </div>
+
+              <div class="payment-overview-item">
+                <div>
+                  <h4>Acrylic Long · Akosua</h4>
+                  <p>Reference: PSK-2026-003</p>
+                </div>
+                <strong>¢200</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="admin-panel reveal delay-1">
+            <div class="admin-panel-head">
+              <div>
+                <p class="service-menu-label">Announcements</p>
+                <h3>Post updates to the website</h3>
+              </div>
+            </div>
+
+            <form class="admin-form-grid">
+              <div class="booking-field">
+                <label for="announcementTitle">Title</label>
+                <input
+                  type="text"
+                  id="announcementTitle"
+                  placeholder="e.g. Graduation bookings now open"
+                />
+              </div>
+
+              <div class="booking-field">
+                <label for="announcementTag">Tag</label>
+                <select id="announcementTag">
+                  <option>New</option>
+                  <option>Popular</option>
+                  <option>Now Open</option>
+                  <option>Limited</option>
+                </select>
+              </div>
+
+              <div class="booking-field admin-field-wide">
+                <label for="announcementText">Message</label>
+                <textarea
+                  id="announcementText"
+                  rows="4"
+                  placeholder="Write the update..."
+                ></textarea>
+              </div>
+
+              <button type="button" class="btn btn-primary admin-inline-btn">
+                Publish Update
+              </button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gallery manager -->
+      <section class="gallery-manager-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Gallery Manager</p>
+            <h2>Upload visuals that keep the site feeling alive.</h2>
+          </div>
+
+          <div class="gallery-manager-grid">
+            <article class="admin-panel reveal">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Upload media</p>
+                  <h3>Add portfolio images</h3>
+                </div>
+              </div>
+
+              <form class="admin-form-grid">
+                <div class="booking-field">
+                  <label for="galleryCategory">Category</label>
+                  <select id="galleryCategory">
+                    <option>Makeup</option>
+                    <option>Nails</option>
+                    <option>Brows</option>
+                    <option>Lashes</option>
+                    <option>Hair</option>
+                  </select>
+                </div>
+
+                <div class="booking-field">
+                  <label for="galleryImage">Select Image</label>
+                  <input type="file" id="galleryImage" />
+                </div>
+
+                <button type="button" class="btn btn-secondary admin-inline-btn">
+                  Upload to Gallery
+                </button>
+              </form>
+            </article>
+
+            <article class="admin-panel reveal delay-1">
+              <div class="admin-panel-head">
+                <div>
+                  <p class="service-menu-label">Preview</p>
+                  <h3>Recent uploads</h3>
+                </div>
+              </div>
+
+              <div class="admin-gallery-preview">
+                <div class="gallery-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=800&q=80"
+                    alt="Gallery preview 1"
+                  />
+                </div>
+                <div class="gallery-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=800&q=80"
+                    alt="Gallery preview 2"
+                  />
+                </div>
+                <div class="gallery-thumb">
+                  <img
+                    src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
+                    alt="Gallery preview 3"
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-card reveal">
+            <p class="eyebrow">Next step</p>
+            <h2>Now the dashboard is in place. The next part is making it all actually work with Firebase.</h2>
+            <div class="cta-actions">
+              <a href="booking.html" class="btn btn-secondary">Back to Booking</a>
+              <a href="index.html" class="btn btn-primary">Back Home</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <div class="brand-mark">CM</div>
+            <div class="brand-text">
+              <span class="brand-top">CISCA</span>
+              <span class="brand-bottom">MAKEOVERS</span>
+            </div>
+          </a>
+          <p class="footer-text">
+            Admin control for bookings, services, availability, payments and updates.
+          </p>
+        </div>
+
+        <div>
+          <h4>Admin Areas</h4>
+          <ul>
+            <li><a href="#dashboard">Overview</a></li>
+            <li><a href="#availabilityManager">Availability</a></li>
+            <li><a href="#servicesManager">Services</a></li>
+            <li><a href="#bookingsManager">Bookings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Booking</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
