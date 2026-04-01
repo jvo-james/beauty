@@ -1,1 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cisca Makeovers | Booking</title>
+  <meta
+    name="description"
+    content="Book your makeup, nails, brows, lashes, or hair appointment with Cisca Makeovers."
+  />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-grid"></div>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <div class="brand-mark">CM</div>
+          <div class="brand-text">
+            <span class="brand-top">CISCA</span>
+            <span class="brand-bottom">MAKEOVERS</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="#bookingFlow">Booking Flow</a>
+          <a href="#availability">Availability</a>
+          <a href="#paymentPanel">Payment</a>
+          <a href="admin.html" class="nav-cta">Admin</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="booking-hero-section">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=80"
+            alt="Beauty booking hero"
+          />
+          <div class="hero-overlay booking-hero-overlay"></div>
+        </div>
+
+        <div class="container booking-hero-content">
+          <div class="booking-hero-copy reveal">
+            <p class="eyebrow">Booking Studio</p>
+            <h1>
+              Choose your service,
+              <span>pick your time, secure your slot.</span>
+            </h1>
+            <p class="hero-text">
+              This page is designed to feel effortless: select your beauty
+              category, choose a date from available slots only, and complete
+              payment on the page.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#bookingFlow" class="btn btn-primary">Start Booking</a>
+              <a href="services.html" class="btn btn-secondary">View Prices</a>
+            </div>
+          </div>
+
+          <div class="booking-hero-panel reveal delay-1">
+            <div class="booking-panel-card">
+              <span class="live-badge">Live Booking Flow</span>
+              <h3>What happens here</h3>
+              <ul>
+                <li>Select category and service</li>
+                <li>Choose studio or home service</li>
+                <li>Pick date and time</li>
+                <li>Enter your details</li>
+                <li>Pay with Paystack</li>
+                <li>Receive automatic confirmation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Top stats -->
+      <section class="booking-stats-section">
+        <div class="container">
+          <div class="booking-stats-grid reveal">
+            <article class="booking-stat-card">
+              <strong>01</strong>
+              <p>Only available dates and times will appear</p>
+            </article>
+            <article class="booking-stat-card">
+              <strong>02</strong>
+              <p>Studio and selected home service options supported</p>
+            </article>
+            <article class="booking-stat-card">
+              <strong>03</strong>
+              <p>Payments completed directly on the site</p>
+            </article>
+            <article class="booking-stat-card">
+              <strong>04</strong>
+              <p>Booking confirmation sent automatically after payment</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main booking flow -->
+      <section class="booking-flow-section" id="bookingFlow">
+        <div class="container booking-layout">
+          <!-- Left / form -->
+          <div class="booking-main reveal">
+            <div class="section-heading booking-heading">
+              <p class="eyebrow">Make a booking</p>
+              <h2>Build your appointment.</h2>
+              <p>
+                The booking engine can later be powered by Firebase + Paystack
+                using the exact layout below.
+              </p>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+              <!-- Step 1 -->
+              <div class="booking-block">
+                <div class="booking-block-top">
+                  <span>01</span>
+                  <div>
+                    <h3>Select your category</h3>
+                    <p>Pick the beauty area you want to book.</p>
+                  </div>
+                </div>
+
+                <div class="booking-category-grid">
+                  <label class="booking-choice-card active">
+                    <input type="radio" name="category" value="makeup" checked />
+                    <div>
+                      <strong>Makeup</strong>
+                      <span>Soft glam, natural glam, bold glam</span>
+                    </div>
+                  </label>
+
+                  <label class="booking-choice-card">
+                    <input type="radio" name="category" value="nails" />
+                    <div>
+                      <strong>Nails</strong>
+                      <span>Acrylics, stick-ons, gel, care</span>
+                    </div>
+                  </label>
+
+                  <label class="booking-choice-card">
+                    <input type="radio" name="category" value="brows" />
+                    <div>
+                      <strong>Brows</strong>
+                      <span>Microblading, tint, lamination</span>
+                    </div>
+                  </label>
+
+                  <label class="booking-choice-card">
+                    <input type="radio" name="category" value="lashes" />
+                    <div>
+                      <strong>Lashes</strong>
+                      <span>Classic, hybrid, volume, wispy</span>
+                    </div>
+                  </label>
+
+                  <label class="booking-choice-card">
+                    <input type="radio" name="category" value="hair" />
+                    <div>
+                      <strong>Hair</strong>
+                      <span>Installations and styling</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="booking-block">
+                <div class="booking-block-top">
+                  <span>02</span>
+                  <div>
+                    <h3>Service details</h3>
+                    <p>Choose your service type, location and occasion.</p>
+                  </div>
+                </div>
+
+                <div class="booking-form-grid">
+                  <div class="booking-field">
+                    <label for="serviceSelect">Service</label>
+                    <select id="serviceSelect" name="service">
+                      <option>Soft Glam</option>
+                      <option>Natural Glam</option>
+                      <option>Bold Glam</option>
+                      <option>Graduation Glam</option>
+                      <option>Bridesmaid Glam</option>
+                    </select>
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="appointmentType">Appointment Type</label>
+                    <select id="appointmentType" name="appointmentType">
+                      <option>Studio Appointment</option>
+                      <option>Home Service</option>
+                    </select>
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="occasionSelect">Occasion</label>
+                    <select id="occasionSelect" name="occasion">
+                      <option>Birthday</option>
+                      <option>Graduation</option>
+                      <option>Wedding</option>
+                      <option>Engagement</option>
+                      <option>Photoshoot</option>
+                      <option>Matriculation</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="extraNote">Extra Note</label>
+                    <input
+                      type="text"
+                      id="extraNote"
+                      name="extraNote"
+                      placeholder="Any special request?"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="booking-block" id="availability">
+                <div class="booking-block-top">
+                  <span>03</span>
+                  <div>
+                    <h3>Choose date and time</h3>
+                    <p>Only open dates and available time slots should display.</p>
+                  </div>
+                </div>
+
+                <div class="availability-wrap">
+                  <div class="date-panel">
+                    <div class="date-panel-top">
+                      <h4>Select a date</h4>
+                      <p>Example preview of available slots</p>
+                    </div>
+
+                    <div class="date-grid">
+                      <button type="button" class="date-chip muted">10 May</button>
+                      <button type="button" class="date-chip active">12 May</button>
+                      <button type="button" class="date-chip">14 May</button>
+                      <button type="button" class="date-chip">16 May</button>
+                      <button type="button" class="date-chip muted">18 May</button>
+                      <button type="button" class="date-chip">19 May</button>
+                      <button type="button" class="date-chip">21 May</button>
+                      <button type="button" class="date-chip">24 May</button>
+                    </div>
+
+                    <small class="date-legend">
+                      <span><i></i> Available</span>
+                      <span><i class="muted-dot"></i> Full / Blocked</span>
+                    </small>
+                  </div>
+
+                  <div class="time-panel">
+                    <div class="date-panel-top">
+                      <h4>Available times</h4>
+                      <p>Tap a time to reserve it</p>
+                    </div>
+
+                    <div class="time-grid">
+                      <button type="button" class="time-chip">8:00 AM</button>
+                      <button type="button" class="time-chip active">9:30 AM</button>
+                      <button type="button" class="time-chip">11:00 AM</button>
+                      <button type="button" class="time-chip">12:30 PM</button>
+                      <button type="button" class="time-chip muted">2:00 PM</button>
+                      <button type="button" class="time-chip">3:30 PM</button>
+                      <button type="button" class="time-chip">5:00 PM</button>
+                      <button type="button" class="time-chip muted">6:30 PM</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="booking-block">
+                <div class="booking-block-top">
+                  <span>04</span>
+                  <div>
+                    <h3>Your details</h3>
+                    <p>So the booking can be saved and confirmed properly.</p>
+                  </div>
+                </div>
+
+                <div class="booking-form-grid">
+                  <div class="booking-field">
+                    <label for="fullName">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      placeholder="e.g. 0591234567"
+                    />
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="emailAddress">Email Address</label>
+                    <input
+                      type="email"
+                      id="emailAddress"
+                      name="emailAddress"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+
+                  <div class="booking-field">
+                    <label for="locationInfo">Location / Address</label>
+                    <input
+                      type="text"
+                      id="locationInfo"
+                      name="locationInfo"
+                      placeholder="Required for home service"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="booking-block payment-block" id="paymentPanel">
+                <div class="booking-block-top">
+                  <span>05</span>
+                  <div>
+                    <h3>Payment</h3>
+                    <p>Complete payment on the page with Paystack.</p>
+                  </div>
+                </div>
+
+                <div class="payment-preview">
+                  <div class="payment-preview-card">
+                    <div>
+                      <p>Selected Service</p>
+                      <h4>Soft Glam</h4>
+                    </div>
+                    <strong>¢250</strong>
+                  </div>
+
+                  <div class="payment-preview-card">
+                    <div>
+                      <p>Appointment Type</p>
+                      <h4>Studio Appointment</h4>
+                    </div>
+                    <strong>—</strong>
+                  </div>
+
+                  <div class="payment-preview-card total-card">
+                    <div>
+                      <p>Total Due</p>
+                      <h4>Secure checkout</h4>
+                    </div>
+                    <strong>¢250</strong>
+                  </div>
+                </div>
+
+                <div class="payment-action-wrap">
+                  <button type="submit" class="btn btn-primary payment-btn">
+                    Proceed to Paystack
+                  </button>
+                  <p class="payment-note">
+                    After successful payment, the appointment can be saved to
+                    Firebase and a confirmation message can be sent automatically.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right / sticky summary -->
+          <aside class="booking-sidebar reveal delay-1">
+            <div class="booking-summary-card">
+              <div class="summary-top">
+                <p class="eyebrow">Booking Summary</p>
+                <h3>Your current selection</h3>
+              </div>
+
+              <div class="summary-list">
+                <div class="summary-row">
+                  <span>Category</span>
+                  <strong>Makeup</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Service</span>
+                  <strong>Soft Glam</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Type</span>
+                  <strong>Studio</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Date</span>
+                  <strong>12 May</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Time</span>
+                  <strong>9:30 AM</strong>
+                </div>
+                <div class="summary-row total">
+                  <span>Total</span>
+                  <strong>¢250</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-summary-card confirm-card">
+              <p class="eyebrow">Auto confirmation</p>
+              <h3>What gets sent after payment</h3>
+              <ul class="confirm-list">
+                <li>Booking confirmation message</li>
+                <li>Service and payment summary</li>
+                <li>Selected date and time</li>
+                <li>Appointment type</li>
+                <li>Optional reminder before the date</li>
+              </ul>
+            </div>
+
+            <div class="booking-summary-card support-card">
+              <p class="eyebrow">Need help?</p>
+              <h3>Still want a faster route?</h3>
+              <a href="tel:0594186445" class="support-link">Call: 0594 186 445</a>
+              <a
+                href="https://wa.me/233594186445"
+                target="_blank"
+                class="support-link"
+              >
+                WhatsApp: 0594 186 445
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Booking extras -->
+      <section class="booking-extra-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why this page works</p>
+            <h2>It does the talking so she doesn’t have to.</h2>
+          </div>
+
+          <div class="booking-extra-grid">
+            <article class="booking-extra-card reveal">
+              <h3>Live availability</h3>
+              <p>
+                Dates and times can be controlled from the admin page so clients
+                only book what is actually open.
+              </p>
+            </article>
+
+            <article class="booking-extra-card reveal delay-1">
+              <h3>Deposit or full payment</h3>
+              <p>
+                You can later decide whether clients pay fully or just secure
+                their appointment with a deposit.
+              </p>
+            </article>
+
+            <article class="booking-extra-card reveal">
+              <h3>Auto confirmation</h3>
+              <p>
+                Once payment succeeds, the website can send a confirmation email
+                and update the admin dashboard instantly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-card reveal">
+            <p class="eyebrow">Ready to connect the logic?</p>
+            <h2>This layout is built for Firebase, availability control, and Paystack checkout.</h2>
+            <div class="cta-actions">
+              <a href="services.html" class="btn btn-secondary">Back to Services</a>
+              <a href="admin.html" class="btn btn-primary">Go to Admin</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="brand footer-brand">
+            <div class="brand-mark">CM</div>
+            <div class="brand-text">
+              <span class="brand-top">CISCA</span>
+              <span class="brand-bottom">MAKEOVERS</span>
+            </div>
+          </a>
+          <p class="footer-text">
+            Smooth bookings, clear prices and a beauty experience that starts before the appointment.
+          </p>
+        </div>
+
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#bookingFlow">Booking Flow</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0594186445">0594 186 445</a></li>
+            <li><a href="https://instagram.com/cisca.makeovers" target="_blank">Instagram</a></li>
+            <li><a href="https://tiktok.com/@cisca.makeovers" target="_blank">TikTok</a></li>
+            <li><a href="https://snapchat.com/add/cisca.mua" target="_blank">Snapchat</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
